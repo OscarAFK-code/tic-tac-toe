@@ -34,15 +34,6 @@
 				currentSelection.innerHTML = 'X'; 
 				player = 2; 
 				count++; 
-			} else if (player == 2) {
-				currentSelection.innerHTML = 'O'; 
-				player = 1; 
-				count++;
-			}
-			} else if (player == 1) {
-				currentSelection.innerHTML = 'X'; 
-				player = 2; 
-				count++; 
 				document.getElementById("status").innerHTML = "輪到 O 下棋";
 			} else if (player == 2) {
 				currentSelection.innerHTML = 'O'; 
@@ -50,6 +41,7 @@
 				count++;
 				document.getElementById("status").innerHTML = "輪到 X 下棋";
 			}
+			
 			for (var i = 1; i <= 3; i++) {
 				grids[i] = [];
 				for (var j = 1; j <= 3; j++) {
@@ -96,6 +88,7 @@
         </script>
     </head>
     <body>
+        <p id="status" class="status">輪到 X 下棋</p>
         <table id="table" border="1px" class="symbol">
             <tr>
                 <td id='grid11' onclick="determine(id);"></td>
@@ -112,7 +105,6 @@
                 <td id='grid32' onclick="determine(id);"></td>
                 <td id='grid33' onclick="determine(id);"></td>
             </tr>
-			    <p id="status" class="status">輪到 X 下棋</p>
         </table>
     </body>
 </html>
